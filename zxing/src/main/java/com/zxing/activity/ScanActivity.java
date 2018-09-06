@@ -45,9 +45,15 @@ public class ScanActivity extends AppCompatActivity implements View.OnClickListe
     private static final int REQ_PHOTO = 0x102;
     private static final int REQ_CHOOSE_PHOTO = 0x103;
 
-
+    
     public static void start(Activity context,int req){
         Intent intent = new Intent(context,ScanActivity.class);
+        context.startActivityForResult(intent,req);
+    }
+
+    public static void start(Activity context,int req,boolean needAlbum){
+        Intent intent = new Intent(context,ScanActivity.class);
+        intent.putExtra("needAlbum",needAlbum);
         context.startActivityForResult(intent,req);
     }
 
@@ -63,7 +69,13 @@ public class ScanActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initListener(){
         findViewById(R.id.iv_back).setOnClickListener(this);
-        findViewById(R.id.tv_ablumn).setOnClickListener(this);
+        boolean needAlbum = getIntent().getBooleanExtra("needAlbum",false);
+        if(needAlbum){
+            findViewById(R.id.tv_ablumn).setOnClickListener(this);
+            findViewById(R.id.tv_ablumn).setVisibility(View.INVISIBLE);
+        }
+
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         checkCameraPermission();
         CameraManager.init(getApplicationContext());

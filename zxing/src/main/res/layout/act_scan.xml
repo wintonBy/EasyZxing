@@ -35,6 +35,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:text="相册"
+            android:visibility="gone"
             android:gravity="center"
             android:textColor="@android:color/white"
             />
