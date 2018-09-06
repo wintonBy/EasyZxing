@@ -32,10 +32,12 @@ public static void start(Activity context,int req)
 public static void start(Activity context,int req,boolean needAlbum)
 ```
 # 界面简介，通用
-![img](screen/screen.jpg)
+<center>
+<img src="screen/screen.jpg" width="50%" height="50%"/>
+</center>
 
 # 手电筒开关会在光线若的情况下自动打开
-![img](screen/screen1.jpg)
+<img src="screen/screen1.jpg" width="50%" height="50%"/>
 
 # 读取相册 使用相机权限也已经封装
 
