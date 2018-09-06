@@ -45,7 +45,7 @@ public class ScanActivity extends AppCompatActivity implements View.OnClickListe
     private static final int REQ_PHOTO = 0x102;
     private static final int REQ_CHOOSE_PHOTO = 0x103;
 
-    
+
     public static void start(Activity context,int req){
         Intent intent = new Intent(context,ScanActivity.class);
         context.startActivityForResult(intent,req);
