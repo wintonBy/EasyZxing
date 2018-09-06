@@ -44,6 +44,33 @@ public static void start(Activity context,int req,boolean needAlbum)
 ### req：回调结果code
 ### needAlbum：是否需要相册选择
 
+### 请求示例
+```
+ScanActivity.start(ManiActivity.this,123);
+```
+### 回调处理
+```
+ @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case 123:
+            if(resultCode == RESULT_OK){
+                String type = data.getStringExtra(CodeUtils.RESULT_TYPE);
+                String result = data.getStringExtra(CodeUtils.RESULT_STRING);
+                if(type.equals(CodeUtils.RESULT_SUCCESS)){
+                    Toast.makeText(this,result,Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(this,"扫描失败",Toast.LENGTH_SHORT).show();
+                }
+            }
+            break;
+            default:break;
+        }
+
+    }
+```
+
 ## License
  Copyright 2018 Winton
 

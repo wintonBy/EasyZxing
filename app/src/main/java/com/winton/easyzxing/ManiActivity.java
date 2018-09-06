@@ -1,12 +1,17 @@
 package com.winton.easyzxing;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.zxing.activity.CodeUtils;
 import com.zxing.activity.ScanActivity;
+
+import javax.xml.transform.Result;
 
 /**
  * @author: winton
@@ -32,5 +37,23 @@ public class ManiActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case 123:
+            if(resultCode == RESULT_OK){
+                String type = data.getStringExtra(CodeUtils.RESULT_TYPE);
+                String result = data.getStringExtra(CodeUtils.RESULT_STRING);
+                if(type.equals(CodeUtils.RESULT_SUCCESS)){
+                    Toast.makeText(this,result,Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(this,"扫描失败",Toast.LENGTH_SHORT).show();
+                }
+            }
+            break;
+            default:break;
+        }
 
+    }
 }
