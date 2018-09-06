@@ -1,7 +1,6 @@
 # EasyZxing
 基于Zxing二次开发封装，可直接使用，封装了权限/相册等等
 
-# 使用方法
 
 ## 集成方式
 
@@ -22,28 +21,28 @@ Step 2. Add the dependency
 	        implementation 'com.github.wintonBy:EasyZxing:1.0'
 	}
 ```
-
-## 直接调用(不需要相册选择)
+##使用方法
+### 直接调用(不需要相册选择)
 ```
 public static void start(Activity context,int req)
 ```
-## 直接调用(需要相册选择）
+### 直接调用(需要相册选择）
 ```
 public static void start(Activity context,int req,boolean needAlbum)
 ```
-# 界面简介，通用
+## 界面简介，通用
 <center>
-<img src="screen/screen.jpg" width="50%" height="50%"/>
+<img src="screen/screen.jpg" width="25%" height="25%"/>
 </center>
 
-# 手电筒开关会在光线若的情况下自动打开
-<img src="screen/screen1.jpg" width="50%" height="50%"/>
+## 手电筒开关会在光线若的情况下自动打开
+<img src="screen/screen1.jpg" width="25%" height="25%"/>
 
-# 读取相册 使用相机权限也已经封装
+## 读取相册 使用相机权限也已经封装
 
-# 参数
-## req：回调结果code
-## needAlbum：是否需要相册选择
+## 参数
+### req：回调结果code
+### needAlbum：是否需要相册选择
 
 ## License
  Copyright 2018 Winton
