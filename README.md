@@ -1,25 +1,45 @@
 # EasyZxing
 基于Zxing二次开发封装，可直接使用，封装了权限/相册等等
 
-#使用方法
+# 使用方法
 
-##直接调用(不需要相册选择)
+## 集成方式
+
+### gradle
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Step 2. Add the dependency
+```
+	dependencies {
+	        implementation 'com.github.wintonBy:EasyZxing:1.0'
+	}
+```
+
+## 直接调用(不需要相册选择)
 ```
 public static void start(Activity context,int req)
 ```
-##直接调用(需要相册选择）
+## 直接调用(需要相册选择）
 ```
 public static void start(Activity context,int req,boolean needAlbum)
 ```
-#界面简介，通用
+# 界面简介，通用
 ![img](screen/screen.jpg)
 
-#手电筒开关会在光线若的情况下自动打开
+# 手电筒开关会在光线若的情况下自动打开
 ![img](screen/screen1.jpg)
 
-#读取相册 使用相机权限也已经封装
+# 读取相册 使用相机权限也已经封装
 
-#参数
+# 参数
 ## req：回调结果code
 ## needAlbum：是否需要相册选择
 
