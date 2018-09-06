@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="扫一扫"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            />
+        <TextView
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_ablumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="相册"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_my_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/ll_light"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@mipmap/iv_light_switch"
+            android:id="@+id/iv_light_switch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="center"
+            />
+
+        <TextView
+            android:id="@+id/light_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/white"
+            android:text="轻触点亮"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

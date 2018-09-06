@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zxing" >
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.autofocus"/>
+    <application
+        android:allowBackup="true"
+        >
+
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            ></activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".activity.ScanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            ></activity>
+
+    </application>
+
+</manifest>
