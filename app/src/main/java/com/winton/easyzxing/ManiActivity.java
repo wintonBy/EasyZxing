@@ -43,9 +43,9 @@ public class ManiActivity extends AppCompatActivity {
         switch (requestCode){
             case 123:
             if(resultCode == RESULT_OK){
-                String type = data.getStringExtra(CodeUtils.RESULT_TYPE);
+                int type = data.getIntExtra(CodeUtils.RESULT_TYPE,-1);
                 String result = data.getStringExtra(CodeUtils.RESULT_STRING);
-                if(type.equals(CodeUtils.RESULT_SUCCESS)){
+                if(type == CodeUtils.RESULT_SUCCESS){
                     Toast.makeText(this,result,Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(this,"扫描失败",Toast.LENGTH_SHORT).show();
